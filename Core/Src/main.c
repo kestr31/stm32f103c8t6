@@ -96,16 +96,16 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    /* USER CODE END WHILE */
     // Increase the speed of the motor every 10ms by 0.1% starting from 0%
-    for(uint16_t i=0; i<1000; i++){
+    // for(uint16_t i=0; i<1000; i++){
       htim1.Instance->CCR1 = i;
       HAL_Delay(10);
       if (i == 999){
         // On max speed, wait for 5 seconds
         HAL_Delay(5000);
       }
-    }
+    /* USER CODE END WHILE */
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
